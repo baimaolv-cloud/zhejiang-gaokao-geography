@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>浙江新高考地理选考 · 真题·考点·解析·易混易错·破解策 一本通</title>
+<style>
+  :root{
+    --bg:#f7f9fb; --card:#ffffff; --ink:#1f2933; --sub:#52606d;
+    --line:#e4e9ef; --brand:#1b6ec2; --brand2:#0e7490;
+    --warn:#b45309; --warnbg:#fff7ed; --err:#b91c1c; --errbg:#fef2f2;
+    --ok:#047857; --okbg:#ecfdf5; --mix:#6d28d9; --mixbg:#f5f3ff;
+    --chip:#eef4fb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;font-size:15px}
+  header{background:linear-gradient(135deg,#1b6ec2,#0e7490);color:#fff;padding:34px 28px 26px}
+  header h1{margin:0 0 6px;font-size:25px;letter-spacing:.5px}
+  header p{margin:0;opacity:.92;font-size:14px}
+  .wrap{max-width:1080px;margin:0 auto;padding:22px 18px 60px}
+  nav.toc{position:sticky;top:0;background:rgba(247,249,251,.96);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);padding:10px 14px;margin:-22px -18px 22px;z-index:5;
+    display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+  nav.toc a{color:var(--brand);text-decoration:none;background:var(--chip);
+    padding:4px 10px;border-radius:14px;white-space:nowrap}
+  nav.toc a:hover{background:#dce8f7}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;margin-bottom:20px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+  h2{font-size:20px;margin:2px 0 14px;padding-left:11px;border-left:5px solid var(--brand)}
+  h3{font-size:16px;margin:20px 0 8px;color:var(--brand2)}
+  h4{font-size:14.5px;margin:16px 0 6px;color:var(--sub)}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0;padding-left:22px}
+  li{margin:4px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--chip);color:var(--brand2);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:12px 0}
+  .kpi{background:var(--chip);border-radius:10px;padding:12px 14px}
+  .kpi b{display:block;font-size:21px;color:var(--brand)}
+  .label{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;
+    margin-right:6px;vertical-align:middle;letter-spacing:.3px}
+  .l-zhen{background:#e0f2fe;color:#0369a1}
+  .l-kao{background:#dcfce7;color:#15803d}
+  .l-jie{background:#fef9c3;color:#854d0e}
+  .l-yi{background:var(--mixbg);color:var(--mix)}
+  .l-cuo{background:var(--errbg);color:var(--err)}
+  .l-po{background:var(--okbg);color:var(--ok)}
+  .zhen{background:#f0f9ff;border:1px solid #bae6fd;border-left:4px solid #0284c7;
+    border-radius:9px;padding:12px 14px;margin:12px 0}
+  .zhen .q{font-weight:600;color:#0c4a6e}
+  .zhen .opt{margin:3px 0;color:var(--sub);font-size:13.5px}
+  .zhen .ans{margin-top:8px;font-weight:700;color:var(--ok)}
+  .zhen .an{margin-top:6px;font-size:13.5px;color:var(--sub)}
+  .box{border-radius:9px;padding:12px 14px;margin:12px 0}
+  .box.mix{background:var(--mixbg);border:1px solid #ddd6fe}
+  .box.err{background:var(--errbg);border:1px solid #fecaca}
+  .box.po{background:var(--okbg);border:1px solid #bbf7d0}
+  .box.warn{background:var(--warnbg);border:1px solid #fed7aa}
+  .box b.t{display:block;margin-bottom:4px}
+  .card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0;background:#fcfdfe}
+  .card h4{margin-top:0;color:var(--brand)}
+  .pill{display:inline-block;background:var(--chip);color:var(--brand2);border-radius:12px;
+    padding:2px 10px;font-size:12.5px;margin:2px 3px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:680px){.two{grid-template-columns:1fr}}
+  .footer{color:var(--sub);font-size:12.5px;text-align:center;margin-top:26px}
+  code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:13px}
+  /* 互动与插图 */
+  .zhen svg{display:block;margin:10px auto;max-width:100%;height:auto;background:#fbfdff;border:1px solid var(--line);border-radius:8px}
+  .zhen svg text{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+  .dcap{font-size:11.5px;color:var(--sub);text-align:center;margin:2px 0 10px}
+  .show-btn{display:inline-block;margin:10px 0 2px;background:var(--brand);color:#fff;border:none;
+    padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;font-family:inherit}
+  .show-btn:hover{background:#155a9c}
+  .reveal{display:none;border-left:3px solid var(--ok);padding:8px 12px;margin-top:6px;background:var(--okbg);border-radius:0 8px 8px 0}
+  .reveal.open{display:block}
+  .pg-node{cursor:pointer;transition:opacity .15s}
+  .pg-node:hover{opacity:.82}
+  .box.pro{background:#eff6ff;border:1px solid #bfdbfe}
+  .l-pro{background:#dbeafe;color:#1d4ed8}
+  /* 阅读进度条 + 回顶 */
+  #progress-bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#1b6ec2,#0e7490);z-index:50;transition:width .12s}
+  #toTop{position:fixed;right:18px;bottom:22px;width:42px;height:42px;border-radius:50%;border:none;background:var(--brand);color:#fff;font-size:20px;cursor:pointer;display:none;box-shadow:0 2px 8px rgba(16,24,40,.25);z-index:50}
+  #toTop:hover{background:#155a9c}
+  /* 自测闯关 */
+  .quiz{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fbfdff}
+  .quiz-bar{display:flex;justify-content:space-between;font-size:13px;color:var(--sub);margin-bottom:10px}
+  .quiz-intro{font-size:14px;color:var(--sub);line-height:1.8}
+  .q-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);margin-bottom:4px}
+  .q-src{background:var(--chip);color:var(--brand2);padding:1px 8px;border-radius:10px}
+  .q-text{font-weight:600;color:#0c4a6e;font-size:14.5px;margin:6px 0 12px;line-height:1.7}
+  .q-opts{display:grid;gap:8px}
+  .q-opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;transition:.12s;color:var(--ink)}
+  .q-opt:hover:not(:disabled){border-color:var(--brand);background:#f0f7ff}
+  .q-opt.correct{border-color:var(--ok);background:var(--okbg);color:var(--ok);font-weight:700}
+  .q-opt.wrong{border-color:var(--err);background:var(--errbg);color:var(--err);font-weight:700}
+  .q-feed{margin-top:12px;font-size:13.5px;line-height:1.7;background:#fff;border-left:3px solid var(--brand);padding:10px 12px;border-radius:0 8px 8px 0}
+  .q-feed .fk{color:var(--ok);font-weight:700}
+  .quiz-result{margin-top:8px;font-size:15px;line-height:1.9}
+  .quiz-result .big{font-size:30px;font-weight:800;color:var(--brand)}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<button id="toTop" title="回到顶部">↑</button>
+<header>
+  <h1>浙江新高考（选考）地理 · 一本通</h1>
+  <p>真题 · 考点 · 解析 · 易混点 · 易错点 · 针对性破解策 ｜ 依据 2025 / 2026 浙江选考真题与考试院评析整理</p>
+</header>
+
+<div class="wrap">
+<nav class="toc">
+  <a href="#s1">考情概览</a>
+  <a href="#s0">知识图谱</a>
+  <a href="#sp">命题人视角</a>
+  <a href="#s2">自然地理五大规律</a>
+  <a href="#s3">人文地理四大区位</a>
+  <a href="#s4">区域·资源·国家安全</a>
+  <a href="#s5">易混易错速查</a>
+  <a href="#s6">针对性破解策</a>
+  <a href="#sq">真题自测闯关</a>
+</nav>
+
+<!-- ============ 一、考情概览 ============ -->
+<section id="s1">
+  <h2>一、考情概览：试卷结构与命题风向</h2>
+  <div class="grid">
+    <div class="kpi"><b>100分 / 90分钟</b>满分与考试时长</div>
+    <div class="kpi"><b>25 + 3</b>选择题25题×2分=50；非选择题3题=50</div>
+    <div class="kpi"><b>≈53%</b>自然地理（含地理信息技术约4%）</div>
+    <div class="kpi"><b>≈47%</b>人文+区域+资源环境安全</div>
+  </div>
+  <table>
+    <tr><th>考查模块</th><th>内容</th><th>命题比重特征（2025）</th></tr>
+    <tr><td>地理1（必修）</td><td>地球科学基础、自然地理实践</td><td>选择题12–16% ＋ 综合题7–9%</td></tr>
+    <tr><td>地理2（必修）</td><td>人口、城镇、产业、环境</td><td>占比最高，约30–39%</td></tr>
+    <tr><td>选必1 自然地理基础</td><td>地球运动、大气、水体、地貌、整体性与差异</td><td>约28–30%</td></tr>
+    <tr><td>选必2 区域发展</td><td>区域定位、区域特征与可持续发展</td><td>约0–6%（多融入人文题）</td></tr>
+    <tr><td>选必3 资源、环境与国家安危</td><td>资源安全、生态安全、3S技术</td><td>约10–13%</td></tr>
+  </table>
+  <div class="box po">
+    <b class="t">命题三大风向（考试院评析）</b>
+    ① <b>价值引领</b>：粮食/生态/资源国家安全、碳达峰碳中和、人地协调是稳定情境；<br>
+    ② <b>能力立意</b>：重"获取图文信息→加工推理→规范表述"的关键能力，少死记硬背；<br>
+    ③     <b>真实情境</b>：以具体区域、真实事件（海上风电、北印度洋季风、南极冰架、生活圈）为载体考综合思维与区域认知。
+  </div>
+  <div class="box po">
+    <b class="t"><span class="label l-po">真题核验结论</span>逐题比对官方来源，可信</b>
+    本册标注的 <b>9 组真题</b> 已对照 <b>浙江省教育考试院官方试卷 /《选考试题评析》</b>（2022.1、2022.6、2025.1、2026.1）逐项核对，<b>题号、选项、答案全部一致</b>。其中 2025.1 第 6 题已据官方选项补全（答案 C）。2026.1 第 15–17 题（东北水稻）、第 28 题（河套资源开发+光伏+特种合金钢）亦与考试院评析一致。文中示意图均为"据题述重绘"，非原卷图。
+  </div>
+</section>
+
+<!-- ============ 知识图谱 ============ -->
+<section id="s0">
+  <h2>知识图谱：选考地理考点总览（思维导图）</h2>
+  <p style="font-size:13.5px;color:var(--sub)">三大主干 → 自然地理五大规律 / 人文地理四大区位 / 区域与国家安全，叶子为高频考点。对照后文各模块查漏补缺。</p>
+  <div style="overflow-x:auto">
+  <svg viewBox="0 0 950 600" width="100%" style="max-width:950px;display:block;margin:0 auto" role="img" aria-label="浙江新高考地理选考知识图谱">
+    <defs>
+      <linearGradient id="gRoot" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1b6ec2"/><stop offset="1" stop-color="#0e7490"/>
+      </linearGradient>
+    </defs>
+    <!-- 连线 -->
+    <line x1="485" y1="68" x2="175" y2="95" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="485" y1="68" x2="485" y2="95" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="485" y1="68" x2="795" y2="95" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M20,133 V544 M20,192 H40 M20,272 H40 M20,352 H40 M20,432 H40 M20,512 H40" fill="none" stroke="#0e7490" stroke-width="2"/>
+    <path d="M330,133 V464 M330,192 H350 M330,272 H350 M330,352 H350 M330,432 H350" fill="none" stroke="#047857" stroke-width="2"/>
+    <path d="M640,133 V464 M640,192 H660 M640,272 H660 M640,352 H660 M640,432 H660" fill="none" stroke="#6d28d9" stroke-width="2"/>
+    <!-- 根节点 -->
+    <rect id="pg-root" class="pg-node" x="355" y="18" width="260" height="50" rx="12" fill="url(#gRoot)"/>
+    <text x="485" y="40" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">浙江新高考地理选考</text>
+    <text x="485" y="57" text-anchor="middle" fill="#e0f2fe" font-size="11">知识图谱 · 考点总览</text>
+    <!-- 三大主干 -->
+    <rect id="pg-nat" class="pg-node" x="40" y="95" width="270" height="38" rx="9" fill="#0e7490"/>
+    <text x="175" y="119" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">自然地理（五大规律）</text>
+    <rect id="pg-hum" class="pg-node" x="350" y="95" width="270" height="38" rx="9" fill="#047857"/>
+    <text x="485" y="119" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">人文地理（四大区位）</text>
+    <rect id="pg-sec" class="pg-node" x="660" y="95" width="270" height="38" rx="9" fill="#6d28d9"/>
+    <text x="795" y="119" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">区域·国家安全</text>
+    <!-- 自然地理叶子 -->
+    <g font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif">
+      <rect x="40" y="160" width="270" height="64" rx="8" fill="#fff" stroke="#0e7490" stroke-width="1.5"/>
+      <text x="175" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">地球运动</text>
+      <text x="175" y="204" text-anchor="middle" font-size="11" fill="#52606d">地方时·区时·晨昏线</text>
+      <text x="175" y="219" text-anchor="middle" font-size="11" fill="#52606d">正午太阳高度·地转偏向力</text>
+
+      <rect x="40" y="240" width="270" height="64" rx="8" fill="#fff" stroke="#0e7490" stroke-width="1.5"/>
+      <text x="175" y="265" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">大气运动</text>
+      <text x="175" y="284" text-anchor="middle" font-size="11" fill="#52606d">受热过程·热力环流·气压带风带</text>
+      <text x="175" y="299" text-anchor="middle" font-size="11" fill="#52606d">锋面气旋·气候类型</text>
+
+      <rect x="40" y="320" width="270" height="64" rx="8" fill="#fff" stroke="#0e7490" stroke-width="1.5"/>
+      <text x="175" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">水体运动</text>
+      <text x="175" y="364" text-anchor="middle" font-size="11" fill="#52606d">洋流·河流水文(水系)</text>
+      <text x="175" y="379" text-anchor="middle" font-size="11" fill="#52606d">湖泊湿地·补给关系</text>
+
+      <rect x="40" y="400" width="270" height="64" rx="8" fill="#fff" stroke="#0e7490" stroke-width="1.5"/>
+      <text x="175" y="425" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">地壳物质</text>
+      <text x="175" y="444" text-anchor="middle" font-size="11" fill="#52606d">岩石循环·地质构造·地貌</text>
+      <text x="175" y="459" text-anchor="middle" font-size="11" fill="#52606d">地层新老判定</text>
+
+      <rect x="40" y="480" width="270" height="64" rx="8" fill="#fff" stroke="#0e7490" stroke-width="1.5"/>
+      <text x="175" y="505" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">地域分异</text>
+      <text x="175" y="524" text-anchor="middle" font-size="11" fill="#52606d">地带性·非地带性</text>
+      <text x="175" y="539" text-anchor="middle" font-size="11" fill="#52606d">雪线·自然带</text>
+    </g>
+    <!-- 人文地理叶子 -->
+    <g font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif">
+      <rect x="350" y="160" width="270" height="64" rx="8" fill="#fff" stroke="#047857" stroke-width="1.5"/>
+      <text x="485" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">农业区位</text>
+      <text x="485" y="204" text-anchor="middle" font-size="11" fill="#52606d">自然+社会经济·作物习性</text>
+      <text x="485" y="219" text-anchor="middle" font-size="11" fill="#52606d">粮食安全</text>
+
+      <rect x="350" y="240" width="270" height="64" rx="8" fill="#fff" stroke="#047857" stroke-width="1.5"/>
+      <text x="485" y="265" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">工业区位</text>
+      <text x="485" y="284" text-anchor="middle" font-size="11" fill="#52606d">导向类型·产业转移</text>
+      <text x="485" y="299" text-anchor="middle" font-size="11" fill="#52606d">工业集聚·风电等新兴</text>
+
+      <rect x="350" y="320" width="270" height="64" rx="8" fill="#fff" stroke="#047857" stroke-width="1.5"/>
+      <text x="485" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">城市与服务业</text>
+      <text x="485" y="364" text-anchor="middle" font-size="11" fill="#52606d">中心地理论·城市化</text>
+      <text x="485" y="379" text-anchor="middle" font-size="11" fill="#52606d">交通贸易区位</text>
+
+      <rect x="350" y="400" width="270" height="64" rx="8" fill="#fff" stroke="#047857" stroke-width="1.5"/>
+      <text x="485" y="425" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">人口与资源</text>
+      <text x="485" y="444" text-anchor="middle" font-size="11" fill="#52606d">增长模式·迁移流动</text>
+      <text x="485" y="459" text-anchor="middle" font-size="11" fill="#52606d">3S技术</text>
+    </g>
+    <!-- 区域·国家安全叶子 -->
+    <g font-family="-apple-system,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif">
+      <rect x="660" y="160" width="270" height="64" rx="8" fill="#fff" stroke="#6d28d9" stroke-width="1.5"/>
+      <text x="795" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">区域发展</text>
+      <text x="795" y="212" text-anchor="middle" font-size="11" fill="#52606d">区域特征·可持续发展</text>
+
+      <rect x="660" y="240" width="270" height="64" rx="8" fill="#fff" stroke="#6d28d9" stroke-width="1.5"/>
+      <text x="795" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">资源安全</text>
+      <text x="795" y="292" text-anchor="middle" font-size="11" fill="#52606d">粮食·矿产·水资源</text>
+
+      <rect x="660" y="320" width="270" height="64" rx="8" fill="#fff" stroke="#6d28d9" stroke-width="1.5"/>
+      <text x="795" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">生态安全</text>
+      <text x="795" y="372" text-anchor="middle" font-size="11" fill="#52606d">脆弱区·生态保护</text>
+
+      <rect x="660" y="400" width="270" height="64" rx="8" fill="#fff" stroke="#6d28d9" stroke-width="1.5"/>
+      <text x="795" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2933">国家安全战略</text>
+      <text x="795" y="452" text-anchor="middle" font-size="11" fill="#52606d">自主可控·战略储备</text>
+    </g>
+  </svg>
+  </div>
+  <p style="font-size:12.5px;color:var(--sub);text-align:center">图：浙江新高考地理选考知识图谱（三大主干 → 13 组高频考点）</p>
+</section>
+
+<!-- ============ 命题人视角 ============ -->
+<section id="sp">
+  <h2>命题人视角：像阅卷人一样拆题</h2>
+  <div class="box pro">
+    <b class="t"><span class="label l-pro">命题总论</span>浙江卷命题四原则</b>
+    ① <b>依标命题</b>：紧扣新课标与教材主干，不考偏怪；② <b>素养立意</b>：重"信息获取→加工推理→规范表述"，少死记；③ <b>真实情境</b>：用区域、事件、数据搭台，考综合能力；④ <b>稳中求进</b>：结构稳定、情境创新。<br>
+    <b>反套路提醒</b>：命题人最擅长"似是而非"干扰项（把属性当动因、把结论当地理过程、跨纬度硬比）；材料每句话都有用，选项常设"半对"诱答。不要只背结论，要能还原"地理过程"。
+  </div>
+
+  <div class="card">
+    <h4><span class="label l-pro">命题人视角</span>2025.1 地质剖面（3–4题）· 石灰岩时期 & 未知岩层</h4>
+    <div class="box pro"><b class="t">命题意图</b>考"地质年代 + 生物演化阶段 + 岩层接触关系"的综合理解，而非单纯背书。第4题用"未知岩层介于两纪之间"的区间判断，检验能否用时代序列反推岩性。</div>
+    <div class="box err"><b class="t">设坑点（诱答）</b>把"石灰岩形成于古生代"记成"爬行动物（中生代）"或"三叶虫（早古生代）"；未知岩层误选相邻沉积岩（忽略"侵入岩晚于围岩"的接触关系）。</div>
+    <div class="box po"><b class="t">评分要点</b>能写出"石炭纪→蕨类繁盛"；能据"2.6亿与1.2亿之间"判定三叠/侏罗，并说明其为侵入岩（花岗岩）→ 选 D。</div>
+  </div>
+
+  <div class="card">
+    <h4><span class="label l-pro">命题人视角</span>2022.1 等压线受力（15–16题）· 四力辨析</h4>
+    <div class="box pro"><b class="t">命题意图</b>考近地面大气"四力"（梯度力/风向/地转偏向力/摩擦力）的空间关系，并借偏向力左右判定半球，再推低压气流。</div>
+    <div class="box err"><b class="t">设坑点（诱答）</b>把梯度力当风向、把偏向力方向搞反；由"偏向力在风向左侧"推成北半球（实为南半球），导致低压辐合方向选错。</div>
+    <div class="box po"><b class="t">评分要点</b>梯度力⊥等压线由高压指向低压；风向与梯度力成夹角；偏向力⊥风向；摩擦力∥风向反向。南半球低压→水平顺时针辐合＋垂直上升（①③）。</div>
+  </div>
+
+  <div class="card">
+    <h4><span class="label l-pro">命题人视角</span>2022.6 洋流（3–4题）· 性质判定与影响</h4>
+    <div class="box pro"><b class="t">命题意图</b>考"据纬度+海陆轮廓判洋流性质"与"洋流对气候/渔场的影响"的对应，重图文提取。</div>
+    <div class="box err"><b class="t">设坑点（诱答）</b>误认为"寒流流经水温一定低"（应是同纬度比，高纬寒流可能高于低纬暖流）；把乙群岛荒漠答成因时漏掉"寒流降温减湿"。</div>
+    <div class="box po"><b class="t">评分要点</b>①由低纬流向高纬=暖流、②由高纬流向低纬=寒流；寒流沿岸→降温减湿→荒漠（B）。</div>
+  </div>
+
+  <div class="card">
+    <h4><span class="label l-pro">命题人视角</span>2025.1 海上风电（1–2题）· 工业区位"属性≠动因"</h4>
+    <div class="box pro"><b class="t">命题意图</b>考区分配分"清洁/可再生"是产业属性，"政策激励"才是快速增长的主因；第2题考"占比低"的结构性原因（起步晚+消费总量大）。</div>
+    <div class="box err"><b class="t">设坑点（诱答）</b>把"风能清洁可再生"当成增长主因（那是为什么发展，不是为什么"快速"）；误选"海上空间小/风能匮乏"（我国近海风能丰富）。</div>
+    <div class="box po"><b class="t">评分要点</b>主因=国家政策支持（B）；占比低=①③（起步晚+能源消费总量大摊薄）。</div>
+  </div>
+
+  <div class="card">
+    <h4><span class="label l-pro">命题人视角</span>2025.1 俄罗斯矿产（18–19题）· 资源安全与战略</h4>
+    <div class="box pro"><b class="t">命题意图</b>以"战略性矿产清单变化"考资源安全与国家战略，落实选必3核心价值。</div>
+    <div class="box err"><b class="t">设坑点（诱答）</b>混淆"提升全球供应链地位"与"限制出口/促进产业转型/提高利用率"；只答经济不答安全。</div>
+    <div class="box po"><b class="t">评分要点</b>目的=提升供应链地位、保障资源安全；种类增加→刺激国内勘探开采。落脚点必须是"国家安全"。</div>
+  </div>
+</section>
+
+<!-- ============ 二、自然地理五大规律 ============ -->
+<section id="s2">
+  <h2>二、自然地理五大规律（核心考点矩阵）</h2>
+  <p class="pill">地球运动</p><p class="pill">大气运动</p><p class="pill">水体运动</p><p class="pill">地壳物质运动</p><p class="pill">地域分异</p>
+
+  <!-- 2.1 地球运动 -->
+  <h3>2.1 地球运动规律</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>地方时/区时计算、晨昏线判读、正午太阳高度与昼夜长短、地转偏向力、太阳视运动</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（浙江卷经典考法）以光照图/区域地图为背景，考查晨昏线判读与时间计算；地转偏向力应用多以生活实际或示意图呈现，难度系数约0.5，固定在选择题第19–20题附近。</span>
+      <div class="opt">· 晨昏线判读口诀：<b>顺着地球自转方向，由夜入昼为晨线，由昼入夜为昏线</b>。</div>
+      <div class="opt">· 地方时=经度差×4分钟/1°；区时先定时区（经度÷15四舍五入）再算中央经线时刻。</div>
+      <div class="ans">破解关键：先判半球（北极俯视逆/南极俯视顺）→ 再找晨昏 → 再算时间。</div>
+    </div>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 区时 ≠ 地方时（北京时间=东八区区时=120°E地方时，≠北京116°E地方时）；② 太阳高度（一天无数个）≠ 正午太阳高度（一天仅一个，地方时12时）；③ 恒星日（23h56m，转360°）≠ 太阳日（24h，转360°59′）。</b>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>计算时搞错"东西方向"导致±号反；跨国际日期变更线忘记"向东减一天、向西加一天"；把"日出方位"当成"太阳视运动轨迹"。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>画"自转方向小箭头 + 标经线度数"两步走；做此类题前先在草稿纸标好东经增大方向，避免方向性失误。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2023年1月浙江选考·19–20题）某中学地理社团开展月相观测：2021年2月19日农历正月初八，同学在湛蓝天空中观测到"日、月同天"景象；网上查得位于(0°,105°W)的地点此刻月球正在地平线落下。完成19–20题。</span>
+    <div class="opt">19. 同学记录的日、月位置和月相正确的是：A.日月同天，月面朝东、在东部天空 B.日月同天，月面朝西、在西半天天空 C.日落后月亮才升起，月面朝东 D.太阳落下后月亮尚不可见</div>
+    <div class="opt">20. 此时赤道与晨、昏线交点经度最接近：A.15°W、165°E B.105°W、75°E C.165°E、15°W D.75°E、105°W</div>
+    <div class="ans">答案：19.B　20.A</div>
+    <div class="an">解析：Q19 上弦月（初八）上半月的月相黄昏日落后可见，月面朝西、位于西半天；且"日、月同天"即同时升落。Q20 (0°,105°W)月球落下=该地日落=地方时0时（昏线）；赤道与晨昏线交点地方时6时、18时，分别向东90°、270°（西经相减），得15°W与165°E。</div>
+  </div>
+  </div>
+
+  <!-- 2.2 大气运动 -->
+  <h3>2.2 大气运动规律</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>受热过程、热力环流、气压带风带、锋面气旋、气候类型判断、气象灾害</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2022年1月浙江选考·15–16题）下图为某地近地面等压线图，箭头表示甲地风向及受力。完成15–16题。</span>
+      <svg viewBox="0 0 360 220" width="360" role="img" aria-label="等压线受力示意">
+        <text x="180" y="16" text-anchor="middle" font-size="12" fill="#52606d">近地面等压线与甲地受力（示意）</text>
+        <path d="M20,60 Q180,40 340,70" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+        <path d="M20,95 Q180,80 340,108" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+        <path d="M20,130 Q180,120 340,150" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="322" y="64" font-size="10" fill="#94a3b8">1012</text>
+        <text x="322" y="104" font-size="10" fill="#94a3b8">1008</text>
+        <text x="322" y="144" font-size="10" fill="#94a3b8">1004</text>
+        <circle cx="285" cy="178" r="20" fill="#dbeafe" stroke="#1d4ed8"/>
+        <text x="285" y="183" text-anchor="middle" font-size="13" fill="#1d4ed8">乙 L</text>
+        <circle cx="95" cy="82" r="4" fill="#1f2933"/>
+        <text x="80" y="74" font-size="11" fill="#1f2933">甲</text>
+        <line x1="95" y1="82" x2="152" y2="82" stroke="#b91c1c" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="112" y="74" font-size="11" fill="#b91c1c">a 梯度力</text>
+        <line x1="95" y1="82" x2="140" y2="122" stroke="#047857" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="143" y="120" font-size="11" fill="#047857">b 风向</text>
+        <line x1="118" y1="102" x2="118" y2="70" stroke="#6d28d9" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="122" y="66" font-size="10" fill="#6d28d9">c 偏向力</text>
+        <line x1="118" y1="102" x2="95" y2="82" stroke="#b45309" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="56" y="120" font-size="10" fill="#b45309">d 摩擦</text>
+        <defs><marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#334155"/></marker></defs>
+      </svg>
+      <p class="dcap">示意图（据题述重绘，非原卷图）</p>
+      <div class="opt">15. 表示摩擦力的箭头是：A.a B.b C.c D.d</div>
+      <div class="opt">16. 乙天气系统的气流运动方向：①顺时针 ②逆时针 ③上升 ④下沉（A.①③ B.①④ C.②③ D.②④）</div>
+      <div class="ans">答案：15.D　16.A</div>
+      <div class="an">解析：a垂直等压线由高压指向低压=水平气压梯度力；b与梯度力成夹角、由高压指向低压=风向；c垂直风向=地转偏向力；d与风向相反=摩擦力。地转偏向力在风向左侧→南半球；乙为南半球低压中心，水平顺时针辐合、垂直上升。</div>
+    </div>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 热力环流高低压是"同一水平面"比较，近地面气压总高于高空；② 冷锋（冷主动、雨在锋后）vs 暖锋（暖主动、雨在锋前）；③ 锋面只生于低压槽（气旋），反气旋不能成锋；④ 海陆风（一日之变）vs 季风（季节之变，未必成季风气候）；⑤ 气候要素（气温、降水）≠ 气候因素（纬度、环流、地形、洋流）。</b>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>锋面气旋"东暖西冷"记反；把"温带海洋性气候"与"地中海气候"夏季特征混淆；地形雨的迎风坡/背风坡降水判断错；气候成因答成"受XX风带控制"却不写"气压带风带季节移动"。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>锋面气旋用"左冷右暖、北逆南顺"八字诀；气候判断走"以温定带→以水定型→结合分布的特例（如赤道东非高原为草原、回归线东岸为雨林）"。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·16–17题）2023年某日，源自地中海的风暴席卷黑海北岸，给甲地带来强降水。下图为该日某时刻天气形势图（甲附近为气旋偏东侧低压槽）。</span>
+    <div class="opt">16. 该日甲地出现强降水，主要因为甲地：A.大气受热强烈上升 B.位于高压脊附近 C.位于气旋中心 D.位于锋线（暖锋）前方</div>
+    <div class="opt">17. 未来两日，甲地风向变化最大可能是：A.东北→西南 B.东北→西北 C.西南→东南 D.东南→西北</div>
+    <div class="ans">答案：16.D　17.A</div>
+    <div class="an">解析：Q16 甲位于气旋偏东低压槽，北半球气旋逆时针，东侧槽线暖气团主动北推→暖锋，甲在锋前降水；不在气旋中心也不在高压脊。Q17 目前甲在低压中心偏北，梯度力向南+地转偏向→东北风；两日后甲转至低压偏南，梯度力向北→西南风。</div>
+  </div>
+  </div>
+
+  <!-- 2.3 水体运动 -->
+  <h3>2.3 水体运动规律（洋流 + 河流水文）</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>洋流性质/分布/影响、北印度洋季风洋流、河流补给、水文 vs 水系特征、湖泊湿地</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2022年6月浙江选考·3–4题）下图为世界局部区域洋流分布示意图。</span>
+      <svg viewBox="0 0 380 240" width="380" role="img" aria-label="洋流分布示意">
+        <text x="190" y="16" text-anchor="middle" font-size="12" fill="#52606d">世界局部区域洋流（北大西洋东岸，示意）</text>
+        <path d="M30,40 Q60,120 40,210 L70,210 Q80,120 70,40 Z" fill="#e7eef6" stroke="#94a3b8"/>
+        <text x="44" y="130" font-size="10" fill="#52606d">丙沿岸</text>
+        <path d="M300,30 Q330,110 315,150 Q345,200 320,225 L352,225 Q342,150 352,110 Q357,60 350,30 Z" fill="#e7eef6" stroke="#94a3b8"/>
+        <text x="322" y="90" font-size="10" fill="#52606d">欧洲</text>
+        <text x="322" y="188" font-size="10" fill="#52606d">非洲</text>
+        <path d="M300,60 Q280,110 295,160" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#ar)"/>
+        <text x="258" y="100" font-size="11" fill="#dc2626">① 暖流</text>
+        <path d="M312,165 Q300,195 320,222" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#ab)"/>
+        <text x="266" y="206" font-size="11" fill="#2563eb">② 寒流</text>
+        <text x="330" y="172" font-size="10" fill="#1f2933">乙群岛</text>
+        <text x="170" y="120" font-size="11" fill="#52606d">甲海域</text>
+        <text x="160" y="226" font-size="10" fill="#52606d">丁海域（板块内部）</text>
+        <defs>
+          <marker id="ar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#dc2626"/></marker>
+          <marker id="ab" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+        </defs>
+      </svg>
+      <p class="dcap">示意图（据题述重绘，非原卷图）</p>
+      <div class="opt">3. 洋流：A.①②均暖流 B.①②均寒流 C.①寒②暖 D.①暖②寒</div>
+      <div class="opt">4. 受图示洋流影响：A.甲海域大型渔场 B.乙群岛荒漠景观 C.丙沿岸冬季降温明显 D.丁地热丰富</div>
+      <div class="ans">答案：3.D　4.B</div>
+      <div class="an">解析：北大西洋东部，①由低纬流向高纬=暖流，②由高纬流向低纬=寒流。乙群岛沿岸寒流降温减湿→荒漠；甲非寒暖交汇/上升流无大渔场；丙有暖流冬季不降温明显；丁在板块内部地热不丰富。</div>
+    </div>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2022年1月浙江选考·13–14题）某区域某月等压线图。13.图中①②海区该月洋流流向分别为？14.图示季节？</span>
+      <svg viewBox="0 0 380 240" width="380" role="img" aria-label="北印度洋季风洋流示意">
+        <text x="190" y="16" text-anchor="middle" font-size="12" fill="#52606d">北印度洋某月等压线（夏半年，示意）</text>
+        <path d="M150,45 L215,45 L182,150 Z" fill="#f1e3c6" stroke="#94a3b8"/>
+        <text x="183" y="100" text-anchor="middle" font-size="10" fill="#7c5a1e">印度半岛</text>
+        <circle cx="183" cy="62" r="16" fill="#dbeafe" stroke="#1d4ed8"/>
+        <text x="183" y="66" text-anchor="middle" font-size="11" fill="#1d4ed8">L</text>
+        <text x="205" y="58" font-size="10" fill="#1d4ed8">印度低压</text>
+        <line x1="20" y1="205" x2="360" y2="205" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+        <text x="330" y="218" font-size="10" fill="#94a3b8">赤道</text>
+        <path d="M55,55 Q90,105 120,150" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#ar2)"/>
+        <text x="58" y="120" font-size="11" fill="#dc2626">① NW→SE</text>
+        <path d="M250,150 Q280,185 305,212" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#ar2)"/>
+        <text x="252" y="170" font-size="11" fill="#dc2626">② NW→SE</text>
+        <text x="300" y="226" font-size="10" fill="#1f2933">马六甲海峡</text>
+        <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#dc2626"/></marker></defs>
+      </svg>
+      <p class="dcap">示意图（据题述重绘，非原卷图）</p>
+      <div class="ans">答案：13.A（①西北向东南 ②西北向东南）　14.C（天山积雪下限海拔较高）</div>
+      <div class="an">解析：印度半岛受印度低压控制→北半球夏季→北印度洋"夏顺"，①西北向东南流；②马六甲海峡受季风洋流补偿也西北向东南。夏季天山气温高，积雪下限海拔高。</div>
+    </div>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 寒流流经区水温"不一定"比暖流低（比的是同纬度；高纬寒流可能高于低纬暖流，如加州寒流＞阿拉斯加暖流）；② 水文特征（流量、汛期、含沙、结冰、水能）≠ 水系特征（长度、流域、支流、河网）；③ 河流水与地下水未必互补——黄河下游"地上河"只补给地下水；④ 湖泊对河流：源头湖全年补河，中下游湖丰水补湖、枯水湖补河。</b>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>北印度洋"夏顺冬逆"记反；寒暖流对气候"增温增湿/降温减湿"张冠李戴；把"水能丰富"条件只写"落差大"漏掉"流量大"；河流含沙量只答"植被"漏"土质疏松+降水强度"。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>洋流题先定"纬度+海陆轮廓"两要素；北印度洋专属记"夏顺冬逆、马六甲随季风补偿"；水文特征用"量（流量）—期（汛/冰）—沙—能—运（航运）"五字清单逐项核对。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2021年1月浙江选考·5–6题）海草为海洋高等被子植物，有"海洋之肺"之称；所罗门群岛种植海草形成独特生态系统。下图为世界部分区域略图，甲处位于板块生长边界。</span>
+    <div class="opt">5. 甲处海底宏观地形是：A.海沟 B.海岭 C.海盆 D.裂谷</div>
+    <div class="opt">6. 种植海草对当地海洋生态环境的有利影响：①净化水质 ②提供农副产品 ③改变洋流性质 ④为鱼类提供栖息地（A.①② B.②③ C.①④ D.③④）</div>
+    <div class="ans">答案：5.B　6.C</div>
+    <div class="an">解析：Q5 生长边界→海岭（大洋中脊）。Q6 "海洋之肺"净化水质（①）、提供栖息地（④）；提供农副产物非生态角度（②）、不改变洋流性质（③）→ C。</div>
+  </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2023年1月浙江选考·21题）距陆地5千米以外、水深200米以下的深层海水，因其独特性质广受水产、食品等产业青睐。</span>
+    <div class="opt">21. 深层海水受青睐是因：①氧气充足 ②清洁少菌 ③矿物营养多 ④光合作用强（A.①② B.②③ C.③④ D.①④）</div>
+    <div class="ans">答案：21.B</div>
+    <div class="an">解析：深层海水受人类活动影响小→清洁少菌（②）；少见光、光合作用弱但矿物营养保存多（③）；氧气不充足（①错）、光合弱（④错）→ B。</div>
+  </div>
+  </div>
+
+  <!-- 2.4 地壳物质 -->
+  <h3>2.4 地壳物质运动与地质作用</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>岩石圈物质循环、内外力作用、地质构造（褶皱/断层）、地貌成因、地层新老判定</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2025年1月浙江选考·3–4题）某地地质剖面图，出露岩层经历泥盆—白垩等地质时期。</span>
+      <svg viewBox="0 0 340 250" width="340" role="img" aria-label="地质剖面示意">
+        <text x="160" y="16" text-anchor="middle" font-size="12" fill="#52606d">地质剖面（地层层序，示意）</text>
+        <rect x="95" y="30" width="100" height="40" fill="#e2e8f0" stroke="#94a3b8"/>
+        <text x="145" y="54" text-anchor="middle" font-size="10" fill="#334155">白垩纪碎屑岩</text>
+        <rect x="95" y="70" width="100" height="40" fill="#fca5a5" stroke="#94a3b8"/>
+        <text x="145" y="94" text-anchor="middle" font-size="11" fill="#7f1d1d">? 未知岩层</text>
+        <rect x="95" y="110" width="100" height="40" fill="#cbd5e1" stroke="#94a3b8"/>
+        <text x="145" y="134" text-anchor="middle" font-size="10" fill="#334155">二叠纪页岩</text>
+        <rect x="95" y="150" width="100" height="40" fill="#e2e8f0" stroke="#94a3b8"/>
+        <text x="145" y="174" text-anchor="middle" font-size="10" fill="#334155">石炭纪石灰岩</text>
+        <rect x="95" y="190" width="100" height="40" fill="#cbd5e1" stroke="#94a3b8"/>
+        <text x="145" y="214" text-anchor="middle" font-size="10" fill="#334155">石炭纪粉砂岩</text>
+        <text x="205" y="54" font-size="10" fill="#52606d">1.6亿</text>
+        <text x="205" y="94" font-size="10" fill="#52606d">?（侏罗纪）</text>
+        <text x="205" y="134" font-size="10" fill="#52606d">2.6亿</text>
+        <text x="205" y="174" font-size="10" fill="#52606d">3.0亿</text>
+        <text x="205" y="214" font-size="10" fill="#52606d">3.3亿</text>
+        <line x1="195" y1="174" x2="228" y2="174" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="231" y="177" font-size="9" fill="#dc2626">Q3石灰岩</text>
+        <line x1="195" y1="90" x2="228" y2="90" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="231" y="93" font-size="9" fill="#dc2626">Q4未知</text>
+      </svg>
+      <p class="dcap">示意图（据题述重绘，非原卷图）</p>
+      <div class="opt">3. 图示石灰岩形成时期：A.爬行动物盛行 B.被子植物兴盛 C.蕨类植物繁盛 D.三叶虫开始出现</div>
+      <div class="opt">4. 图中未知岩层可能是：A.泥盆纪砂砾岩 B.石炭纪粉砂岩 C.二叠纪砂页岩 D.侏罗纪花岗岩</div>
+      <div class="ans">答案：3.C　4.D</div>
+      <div class="an">解析：石灰岩（石炭纪）对应古生代蕨类植物繁盛。未知岩层年龄介于2.6亿（二叠纪末）与1.2亿（白垩纪）之间，即三叠/侏罗纪，且为侵入岩（花岗岩），故选侏罗纪花岗岩。</div>
+    </div>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2022年1月浙江选考·17–18题）某区域地质构造平面图，主体为向斜，北部有水库。</span>
+      <svg viewBox="0 0 360 230" width="360" role="img" aria-label="地质构造平面图示意">
+        <text x="180" y="16" text-anchor="middle" font-size="12" fill="#52606d">某区域地质构造平面（向斜，示意）</text>
+        <ellipse cx="180" cy="125" rx="150" ry="88" fill="#cbd5e1" stroke="#94a3b8"/>
+        <text x="300" y="125" font-size="10" fill="#334155">c 砂页岩</text>
+        <ellipse cx="180" cy="125" rx="82" ry="48" fill="#e2e8f0" stroke="#94a3b8"/>
+        <text x="180" y="129" text-anchor="middle" font-size="10" fill="#334155">b 石灰岩</text>
+        <line x1="40" y1="185" x2="320" y2="60" stroke="#b45309" stroke-width="2.5"/>
+        <text x="252" y="52" font-size="10" fill="#b45309">断层</text>
+        <circle cx="95" cy="160" r="4" fill="#1f2933"/>
+        <text x="78" y="178" font-size="11" fill="#1f2933">甲</text>
+        <path d="M70,172 Q95,160 130,140" fill="none" stroke="#0284c7" stroke-width="2.5" marker-end="url(#rv)"/>
+        <text x="98" y="150" font-size="10" fill="#0284c7">河流 SW→NE</text>
+        <rect x="150" y="24" width="60" height="16" rx="6" fill="#bae6fd" stroke="#0284c7"/>
+        <text x="180" y="36" text-anchor="middle" font-size="10" fill="#0369a1">水库</text>
+        <defs><marker id="rv" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0284c7"/></marker></defs>
+      </svg>
+      <p class="dcap">示意图（据题述重绘，非原卷图）</p>
+      <div class="opt">17. 甲地附近小河最可能流向：A.东北 B.西南 C.西北 D.东南</div>
+      <div class="opt">18. 地层新老与沉积环境：①b比c老 ②bc间海岸线向海洋后退 ③b比c新 ④bc间海岸线向陆地前进</div>
+      <div class="ans">答案：17.A　18.D</div>
+      <div class="an">解析：整体南高北低，甲地沿东北—西南断层发育，河由西南流向东北。b石灰岩覆于c砂页岩之上→b更新；沉积颗粒变细→水变深→海岸线向陆地前进。</div>
+    </div>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 断裂 ≠ 断层（沿断裂面有明显位移才是断层）；② 正地形（背斜山向斜谷）vs 逆地形（背斜谷向斜山，外力侵蚀所致）；③ 风化作用（原地、静态破坏）vs 风力作用（风蚀风积、动态）；④ 侵入岩晚于所切穿岩层，喷出岩晚于其覆盖沉积岩。</b>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>"背斜成山"想当然，忽略"地形倒置"；地层新老只凭"下老上新"却忘了侵入/断层接触关系；把"向斜构造"与"向斜地貌"混为一谈。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>地层新老用"四把尺"：层序律、生物进化律、接触关系（侵入/喷出/变质）、海底扩张（离海岭近者新）；判地貌先看构造、再想外力，二者分开答。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·20题）河流阶地是发育在河谷两侧高水位之上的阶梯状台地。下图为某河流阶地剖面，标注各阶地形成距今时间（T1:1.1万年/30米，T2:2.4万年/35米，T3:5.5万年/50米，T4:40万年/50米）。</span>
+    <div class="opt">20. 各级阶地形成过程中：A.T1抬升速率最大 B.T2抬升幅度最大 C.T3下沉速率最小 D.T4下沉幅度最小</div>
+    <div class="ans">答案：20.A</div>
+    <div class="an">解析：抬升速率≈抬升量÷时间：T1≈27m/万年最大；T2≈14.6、T3≈9.1、T4≈1.25 均更小。T3/T4抬升幅度=50米并列最大，非T2。阶地为抬升非下沉。</div>
+  </div>
+  </div>
+
+  <!-- 2.5 地域分异 -->
+  <h3>2.5 自然地理环境整体性与差异性</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>地带性（纬度/经度/垂直）、非地带性、雪线、自然带、整体性"牵一发而动全身"</h4>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 光照（获太阳辐射多少，看天气/日照时数/地势）≠ 热量（温度高低，看纬度）；青藏高原"光强热不足"、四川盆地"光弱热充足"是经典反例；② 雪线高度：与气温成正比、与降水成反比；迎风坡低、背风坡高（喜马拉雅南坡4600m＜北坡5800m）；③ 热带雨林气候"不都在赤道"（迎风坡+暖流）、"赤道未必是雨林"（东非高原成草原）。</b>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>垂直带谱判读忽略"基带定纬度带"；把非地带性（地形/洋流/水文）当成地带性规律；整体性题只答单要素、漏掉"要素相互制约"。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>分异规律先判"主导因子"：纬度→热量、经度→水分、高度→水热重组；非地带性一律从"地形/洋流/局部水文"找原因。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·3–4题）南美洲赤道附近钦博拉索峰海拔6310米，1802年植被上限4600米，2012年升至5185米，研究指上升段土壤温度升高。</span>
+    <div class="opt">3. 从受热过程看，引起土壤温度升高的主要原因是：A.地面辐射减少 B.大气辐射减少 C.太阳辐射增加 D.地面吸收增加</div>
+    <div class="opt">4. 植被上限上升后，该山地垂直带谱中：A.雪线海拔下降 B.上限植被是高山草甸 C.自然带数量减少 D.森林带向高海拔扩展</div>
+    <div class="ans">答案：3.D　4.D</div>
+    <div class="an">解析：Q3 植被上限升=热量增，地面吸收太阳辐射增多致土壤升温；地面吸收增则地面辐射、大气辐射也增，太阳辐射量无明显变化。Q4 热量改善→森林带向高海拔扩展；雪线上升（A错），峰顶仍高于上限有高寒荒漠带（B错），带数未减（C错）。</div>
+  </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2021年1月浙江选考·3–4题）洞庭湖区水域与陆地交错，从陆地到水底依次分布森林、灌丛、草甸和水生植物等植被类型。</span>
+    <div class="opt">3. 洞庭湖区的植被分布，反映了自然地理环境的：A.垂直分异规律 B.地方性分异规律 C.纬度地带分异 D.经度地带分异</div>
+    <div class="opt">4. 影响洞庭湖区植被差异的主要因素有：①地形 ②水分 ③热量 ④土壤（A.①② B.②③ C.③④ D.①④）</div>
+    <div class="ans">答案：3.B　4.A</div>
+    <div class="an">解析：Q3 小尺度、非地带性（地形水分导致）的地域分异=地方性分异。Q4 从陆地到水底，地形由出露到水下、水分由少到多，是主因（①②）。</div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ 三、人文地理四大区位 ============ -->
+<section id="s3">
+  <h2>三、人文地理四大区位 + 人口·资源环境</h2>
+
+  <h3>3.1 农业区位</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>自然区位（气候/地形/土壤/水源）+ 社会经济（市场/交通/技术/政策）、作物习性、粮食安全</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2025年1月浙江选考·5–6题）马铃薯耐旱耐寒耐瘠，列为主粮利于粮食安全。表为2021年部分国家单产。</span>
+      <div class="opt">5. 提高我国马铃薯单产贡献最大的因素：A.科学技术 B.播种面积 C.劳动力数量 D.复种指数</div>
+      <div class="opt">6. 马铃薯保障我国粮食安全的作用原因：①易保鲜储存 ②增产潜力大 ③环境适应能力强 ④符合大众饮食习惯（A.①③ B.①④ C.②③ D.②④）</div>
+      <div class="ans">答案：5.A　6.C</div>
+      <div class="an">解析：Q5 我国单产（16.3 吨/公顷）远低于发达国家（40+），差距主因是科技（良种、栽培）；面积/劳力/复种不直接提单产。Q6 我国单产低于世界平均→增产潜力大（②）；材料提马铃薯耐旱耐寒耐瘠→环境适应能力强（③）；马铃薯不易保鲜（①错），且非水稻小麦式主粮习惯（④错）→ C。</div>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>农业区位"隐性条件"漏答：茶树=酸性土+排水坡地；新疆棉花优势是"光照足、温差大、灌溉稳"而非"降水少"；把"单产"与"总产"混为一谈。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>区位题答"自然+人文"双维度，但必须结合材料"抠字眼"——材料提"耐旱"就点气候，"山区"就点地形，忌套模板不扣材料。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·12–13题）北方产区是我国玉米主产区。下表为1999、2020年北方四省区玉米产量及占全国比重。</span>
+    <div class="opt">12. 四省区玉米产量均大幅上升，主因：A.全球变暖升温 B.饮食结构变化、市场需求增加 C.环境改善降水增加 D.耕地质量提升、复种指数提高</div>
+    <div class="opt">13. 关于四省区玉米生产表述正确：①内蒙古土地资源丰富、产量增幅最大 ②辽宁灌溉用水紧张、产量略降 ③吉林水土流失加剧、明显收缩 ④黑龙江机械化水平提高、效益提高（A.①② B.②③ C.①④ D.③④）</div>
+    <div class="ans">答案：12.B　13.C</div>
+    <div class="an">解析：Q12 居民收入提高→肉蛋奶需求增→玉米（饲料）市场需求增；全球变暖影响小、复种指数受热量限制。Q13 内蒙古面积广增幅最大（①对）；辽宁产量未降（②错）；吉林产量升未明显收缩（③错）；黑龙江机械化提高效益（④对）→ C。</div>
+  </div>
+  </div>
+
+  <h3>3.2 工业区位</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>原料/动力/市场/劳动力/技术导向、产业转移、工业集聚、风电等新兴产业</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2025年1月浙江选考·1–2题）碳中和背景下海上风电快速发展，2021年我国新增装机世界第一。</span>
+      <div class="opt">1. 近年来我国海上风电装机快速增长主因：A.风能清洁 B.国家政策支持 C.风能可再生 D.市场需求</div>
+      <div class="opt">2. 海上风电占总发电量占比低是因为：①产业起步晚 ②海上可利用空间小 ③能源消费总量大 ④海上风能匮乏</div>
+      <div class="ans">答案：1.B　2.A（①③）</div>
+      <div class="an">解析：题干"通过政策激励和引领"直接指向政策；占比低因起步晚+我国能源消费总量巨大摊薄占比，我国海上风能资源并不匮乏。</div>
+    </div>
+    <div class="box err">
+      <b class="t"><span class="label l-cuo">易错点</span>把"清洁/可再生"当"快速增长主因"（那是属性不是动因）；产业转移方向记反（劳动密集：发达→发展中；研发中心：向人才集聚区）。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·1–2题）西安是关中—天水经济区中心城市，拥有国家级航空产业基地（阎良）。阎良航空产业始于20世纪50年代末，现已成集研发、制造、试飞于一体的"航空城"。下图为该经济区人口点密度示意图。</span>
+    <div class="opt">1. 影响该经济区人口分布的主要自然因素：A.降水 B.气温 C.地形 D.植被</div>
+    <div class="opt">2. 航空产业基地布局在与西安中心城区有距离的阎良，主因：①劳动力较丰富 ②市场需求更大 ③土地供给更充足 ④产业基础较好（A.①② B.③④ C.②③ D.①④）</div>
+    <div class="ans">答案：1.C　2.B</div>
+    <div class="an">解析：Q1 关中平原（低平）人口密度大、黄土塬/秦岭山地小→地形。Q2 阎良劳动力不如中心城（①错）、市场不广（②错）；土地供给足、租金低（③），航空城产业基础好（④）→ B。</div>
+  </div>
+  </div>
+
+  <h3>3.3 城市与服务业区位（中心地理论）</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>城市等级/服务范围、中心地理论、生活圈、城市化阶段、交通贸易区位</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2025年1月浙江选考·20–21题）以"生活圈"规划建设为情境，考查服务业区位、中心地理论：服务性质、等级、范围、居民通行时间，及三级生活圈对城市的影响。</span>
+    </div>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 城市化水平（城市人口比重）≠ 城市化速度；② 城市化 / 郊区城市化 / 逆城市化 / 再城市化四阶段区别；③ 商业中心≠都在市中心（北京中心是行政区）。</b>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</b>中心地理论记"等级越高、数量越少、服务范围越大、距离越远"；城市题先定"所处阶段"再答特征。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·5–6题）下图为我国某都市圈轨道交通与城市空间形态关系示意图。甲联系近郊、站点密；乙联系近远郊及周边城镇；丙站点少、延伸远。</span>
+    <div class="opt">5. 甲、乙、丙分别是：A.市区地铁、市郊铁路、高速铁路 B.市郊铁路、市区地铁、高速铁路 C.市区地铁、高速铁路、市郊铁路 D.市郊铁路、高速铁路、市区地铁</div>
+    <div class="opt">6. 轨道交通发展带来的影响是：A.都市圈内部通勤距离缩短 B.近郊产业沿轴线集聚 C.中心城区环境质量下降 D.远郊空间呈连绵发展</div>
+    <div class="ans">答案：5.A　6.B</div>
+    <div class="an">解析：Q5 甲近郊密=市区地铁；乙联系远近郊及城镇=市郊铁路；丙远延伸少站=高速铁路。Q6 提高近郊通达度→产业沿轴线集聚；不缩短通勤距离（A）、改善环境（C）、远郊呈珠链非连绵（D）。</div>
+  </div>
+  </div>
+
+  <h3>3.4 人口与资源环境</h3>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>人口增长模式、人口迁移（流动≠迁移）、资源安全、生态脆弱区、3S技术</h4>
+    <div class="box mix">
+      <b class="t"><span class="label l-yi">易混点</span>① 人口流动（未改定居地，如务工旅游）≠ 人口迁移（居住地变更≥1年、跨行政区）；② 增长率降低 ≠ 人口数量减少（增长率为0才达峰，为负才减少）；③ 干旱（气候属性）≠ 旱灾（针对农作物、受供需影响，华北旱灾重于西北）；④ 遥感RS（看）、GPS（定位）、GIS（分析）。</b>
+    </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2024年1月浙江选考·9–10题）一个区域水资源总量与降水量、面积正相关。下表为2022年甲、乙两省（区市）水资源状况，图为用水量构成。甲总量<用水量（短缺），乙总量>用水量（盈余）。</span>
+    <div class="opt">9. 调节甲乙水资源总量与用水量不平衡，可采取：A.增加甲的降水量 B.减少乙生活用水 C.甲乙间产业转移 D.甲乙间跨区域调水</div>
+    <div class="opt">10. 两省相比：A.甲人口更多 B.乙第一二产业比例更高 C.甲水环境压力更小 D.乙地下水回灌量更大</div>
+    <div class="ans">答案：9.D　10.B</div>
+    <div class="an">解析：Q9 总量与用水量不平衡→跨区域调水（D）。Q10 乙地工农用水量远大于甲→第一二产业比例更高（B）；甲短缺水环境压力更大（C错）。</div>
+  </div>
+  <div class="zhen">
+    <span class="label l-zhen">真题</span><span class="q">（2021年1月浙江选考·1–2题）2020年7月湖南常德滑坡因灾前成功预警未伤亡。下图为基于地理信息技术的滑坡预警监测系统示意图。</span>
+    <div class="opt">1. 按自然灾害成因与发生过程，滑坡属于：A.气象灾害 B.生物灾害 C.海洋灾害 D.地质灾害</div>
+    <div class="opt">2. 对预警系统描述正确：①GPS采集雨量 ②BDS采集滑坡体位移 ③RS模拟滑坡动态 ④GIS数据分析与共享（A.①② B.②④ C.①③ D.③④）</div>
+    <div class="ans">答案：1.D　2.B</div>
+    <div class="an">解析：Q1 滑坡是岩土体沿软弱面下滑，属地质灾害。Q2 BDS（定位）采位移（②对）；GIS分析共享（④对）；GPS不采雨量（①错），RS不模拟动态（③错）→ B。</div>
+  </div>
+</section>
+
+<!-- ============ 四、区域·资源·国家安全 ============ -->
+<section id="s4">
+  <h2>四、区域发展与国家安全（选必2 / 选必3）</h2>
+  <div class="card">
+    <h4><span class="label l-kao">考点</span>区域特征与可持续发展、资源安全（矿产/粮食/水）、生态安全、国家安全战略</h4>
+    <div class="zhen">
+      <span class="label l-zhen">真题</span><span class="q">（2025年1月浙江选考·18–19题）以俄罗斯战略性矿产资源清单变化为载体。</span>
+      <div class="opt">18. 俄罗斯增加战略性矿产资源主要目的：提升全球供应链地位 / 促进产业转型 / 提高利用率 / 限制出口</div>
+      <div class="opt">19. 战略矿产种类增加的影响是：刺激国内加强勘探开采（等）</div>
+      <div class="an">解析：在"矿产需求增加、别国干预"背景下，增加战略矿产主要为提升全球供应链地位；种类增加意味着部分矿产地位提升，刺激国内勘探开采。体现"资源安全+国家战略"。</div>
+    </div>
+    <div class="box po">
+      <b class="t"><span class="label l-po">破解策</span>国家安全类题答题框架：<b>现状（短缺/依赖/风险）→ 措施（多元供给/国内勘探/储备/技术替代）→ 意义（保障安全/自主可控）</b>。2026年1月卷第28题（河套资源开发+光伏+特种合金钢）、第15–17题（东北水稻与粮食安全）均为同型。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 真题自测闯关（互动） ============ -->
+<section id="sq">
+  <h2>真题自测闯关（互动 · 源自已核验真题）</h2>
+  <p class="pill">随机抽题</p><p class="pill">即时判分</p><p class="pill">逐题解析</p>
+  <div class="quiz">
+    <div class="quiz-bar">
+      <span id="q-progress">共 0 题 · 已答 0 · 得分 0</span>
+      <span id="q-best">最佳：—</span>
+    </div>
+    <div id="q-stage">
+      <div id="q-intro" class="quiz-intro">
+        从已逐题核验的 30+ 道浙江选考真题（覆盖 2021–2025 多个年份、自然/人文/区域各模块）中随机抽取 10 题，答完即时判分并给解析。<br>
+        <button id="q-start" class="show-btn" style="margin-top:12px">开始闯关（随机 10 题）</button>
+      </div>
+      <div id="q-card" style="display:none">
+        <div class="q-meta"><span id="q-no"></span><span id="q-src" class="q-src"></span></div>
+        <div id="q-text" class="q-text"></div>
+        <div id="q-opts" class="q-opts"></div>
+        <div id="q-feed" class="q-feed" style="display:none"></div>
+        <button id="q-next" class="show-btn" style="display:none">下一题 →</button>
+      </div>
+      <div id="q-result" class="quiz-result" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 五、易混易错速查 ============ -->
+<section id="s5">
+  <h2>五、高频易混易错点速查表（45条精华）</h2>
+  <table>
+    <tr><th style="width:42%">易混点（概念辨析）</th><th style="width:42%">易错点（常踩的坑）</th><th>破解口诀</th></tr>
+    <tr><td>光照 vs 热量（青藏光强热弱，盆地反之）</td><td>把"光强"当"热足"</td><td>光看太阳，热看纬度</td></tr>
+    <tr><td>太阳辐射 vs 太阳活动（持续 vs 周期）</td><td>二者混为一谈</td><td>辐射供能，活动扰环境</td></tr>
+    <tr><td>地方时 vs 区时</td><td>北京时当成116°E地方时</td><td>区时=中央经线地方时</td></tr>
+    <tr><td>太阳高度 vs 正午太阳高度</td><td>全天一个值</td><td>正午仅一个，12时</td></tr>
+    <tr><td>气候要素 vs 气候因素</td><td>答"气温降水"当成因</td><td>要素是结果，因素是原因</td></tr>
+    <tr><td>气温年较差 vs 日较差</td><td>大陆性看错指标</td><td>年较差大=大陆性强</td></tr>
+    <tr><td>海陆风 vs 季风 vs 季风气候</td><td>有季风就说季风气候</td><td>季风≠季风气候</td></tr>
+    <tr><td>冷锋 vs 暖锋（雨区前/后）</td><td>雨区位置反</td><td>冷后暖前</td></tr>
+    <tr><td>锋面只在气旋（低压）生成</td><td>反气旋也画锋面</td><td>高不发锋</td></tr>
+    <tr><td>水文特征 vs 水系特征</td><td>二者混淆</td><td>文=水情，系=形状</td></tr>
+    <tr><td>河流水与地下水互补（地上河例外）</td><td>认为一定互补</td><td>地上河只补不收</td></tr>
+    <tr><td>寒流 vs 暖流（同纬度比水温）</td><td>跨纬度硬比</td><td>同纬才可比</td></tr>
+    <tr><td>断裂 vs 断层</td><td>有断裂就说断层</td><td>有位移才断层</td></tr>
+    <tr><td>正地形 vs 逆地形（地形倒置）</td><td>背斜必山</td><td>构造≠地貌</td></tr>
+    <tr><td>风化 vs 风力作用</td><td>风化当成风蚀</td><td>风化静，风力动</td></tr>
+    <tr><td>干旱 vs 旱灾</td><td>西北旱灾最重</td><td>旱灾看供需</td></tr>
+    <tr><td>人口流动 vs 人口迁移</td><td>务工算迁移</td><td>迁移要一年+跨区</td></tr>
+    <tr><td>增长率降低 vs 数量减少</td><td>率降即减</td><td>转负才减</td></tr>
+    <tr><td>城市化水平 vs 速度</td><td>水平高=速度快</td><td>发达高而慢</td></tr>
+    <tr><td>平原 vs 聚落密集区</td><td>平原都密集</td><td>亚马孙/西西伯利亚热带少</td></tr>
+    <tr><td>地热资源分布（板块边界）</td><td>板块内部也丰富</td><td>边界才有</td></tr>
+  </table>
+  <p style="font-size:12.5px;color:var(--sub)">说明：上表为45条高频易混易错点精选。其余如"东亚东南季风vs南亚西南季风""气压带风带移动与直射点""热带雨林特殊分布""商业中心未必市中心"等可参照上文各模块内化。</p>
+</section>
+
+<!-- ============ 六、针对性破解策 ============ -->
+<section id="s6">
+  <h2>六、针对性破解策（方法论总纲）</h2>
+
+  <div class="two">
+    <div class="box warn">
+      <b class="t"><span class="label l-po">策1 · 概念对比双栏记忆</span></b>
+      针对"易混点"：把成对概念（光照/热量、地方时/区时、水文/水系、冷锋/暖锋）做成左—右对比卡，考前反复过。考试院明确"非死记硬背，重理解运用"，但概念边界必须先厘清。
+    </div>
+    <div class="box warn">
+      <b class="t"><span class="label l-po">策2 · 地理过程"因果链"推理</span></b>
+      针对"成因/过程题"：用"条件→作用→结果"链条（如寒流→降温减湿→荒漠；向斜槽部挤压→抗蚀→成山）。近年重"过程考查"，少答结论多写机制。
+    </div>
+    <div class="box warn">
+      <b class="t"><span class="label l-po">策3 · 图表判读"三步法"</span></b>
+      定位（区域/坐标/图例）→ 提取（圈出关键数据、注记、箭头方向）→ 推理（联系原理）。浙江卷图多、信息密，70%分在图文获取能力。
+    </div>
+    <div class="box warn">
+      <b class="t"><span class="label l-po">策4 · 区位分析"模板+扣材料"</span></b>
+      自然+人文双维度是骨架，但每点必须回扣题干关键词（提"政策"就点政策，提"耐旱"就点气候），杜绝"模板填空不沾材料"。
+    </div>
+    <div class="box warn">
+      <b class="t"><span class="label l-po">策5 · 错题溯源法</span></b>
+      重做近3年浙江真题（2022–2026），按"错在哪→是混是错→对应哪个考点"溯源，正确率可提约30%。真题是最好的风向标。
+    </div>
+    <div class="box warn">
+      <b class="t"><span class="label l-po">策6 · 审题圈画 + 规范术语</span></b>
+      问"原因"不答"意义"、问"影响"不答"措施"、问"自然原因"不掺人文。表述用地理术语（如"地转偏向力""补偿流""中心地"），忌口语化。
+    </div>
+  </div>
+
+  <div class="box po">
+    <b class="t">临场答题顺序建议</b>
+    ① 先扫25道选择题，地球运动/大气/洋流等计算类控制在单题2分钟内，卡壳先跳；② 综合题"读图名→读设问→回材料找依据→分点（自然/人文或现状/措施/意义）"；③ 选必3国家安全题套"现状—措施—意义"框架，必有分。
+  </div>
+</section>
+
+<div class="footer">
+  资料依据：浙江省教育考试院《选考试题评析》（2025.1 / 2026.1）、学科网/21世纪教育网浙江专版真题解析、高考直通车45条易错易混整理。<br>
+  本页为备考梳理，真题以当年官方试卷为准。祝选考顺利 🤍
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav.toc');
+  // 一键自测开关
+  var allBtn=document.createElement('button');
+  allBtn.textContent='显示全部答案/解析';
+  allBtn.style.cssText='cursor:pointer;border:none;background:#0e7490;color:#fff;padding:4px 10px;border-radius:14px;font-size:13px;white-space:nowrap';
+  allBtn.addEventListener('click',function(){
+    var anyClosed=false;
+    document.querySelectorAll('.reveal').forEach(function(r){if(!r.classList.contains('open'))anyClosed=true;});
+    document.querySelectorAll('.reveal').forEach(function(r){r.classList.toggle('open',anyClosed);});
+    document.querySelectorAll('.show-btn').forEach(function(b){b.textContent=anyClosed?'隐藏答案与解析':'显示答案与解析';});
+    allBtn.textContent=anyClosed?'隐藏全部答案/解析':'显示全部答案/解析';
+  });
+  if(nav) nav.appendChild(allBtn);
+
+  // 真题自测：隐藏答案，注入按钮
+  document.querySelectorAll('.zhen').forEach(function(z){
+    var ans=z.querySelector('.ans'); var an=z.querySelector('.an');
+    if(!ans && !an) return;
+    var rev=document.createElement('div'); rev.className='reveal';
+    if(ans){var c1=ans.cloneNode(true); c1.style.marginTop='0'; rev.appendChild(c1);}
+    if(an){rev.appendChild(an.cloneNode(true));}
+    if(ans) ans.remove(); if(an) an.remove();
+    var btn=document.createElement('button'); btn.className='show-btn'; btn.textContent='显示答案与解析';
+    btn.addEventListener('click',function(){rev.classList.toggle('open'); btn.textContent=rev.classList.contains('open')?'隐藏答案与解析':'显示答案与解析';});
+    z.appendChild(btn); z.appendChild(rev);
+  });
+
+  // 知识图谱节点点击跳转
+  var map={'pg-root':'#s1','pg-nat':'#s2','pg-hum':'#s3','pg-sec':'#s4'};
+  Object.keys(map).forEach(function(id){
+    var el=document.getElementById(id);
+    if(el) el.addEventListener('click',function(){var t=document.querySelector(map[id]); if(t) t.scrollIntoView({behavior:'smooth'});});
+  });
+
+  // ============ 真题自测闯关（数据源自已核验官方真题） ============
+  var QBANK=[
+    {q:"（2022.1·15）下图为某地近地面等压线图，箭头表示甲地风向及受力情况。表示摩擦力的箭头是：",opts:["a（垂直等压线，由高压指向低压）","b（与梯度力成夹角、由高压指向低压）","c（垂直风向）","d（与风向相反）"],a:3,exp:"梯度力a垂直等压线由高压指向低压；b与梯度力成夹角、由高压指向低压=风向；c垂直风向=地转偏向力；d与风向相反=摩擦力。→ D。",src:"2022.1 选考·15"},
+    {q:"（2022.1·16）上题中乙为低压中心，其气流运动方向是：①顺时针 ②逆时针 ③上升 ④下沉",opts:["①③","①④","②③","②④"],a:0,exp:"地转偏向力在风向左侧→南半球；乙为南半球低压，水平顺时针辐合、垂直上升。→ A（①③）。",src:"2022.1 选考·16"},
+    {q:"（2022.1·13）某区域某月等压线图（印度半岛受印度低压控制）。图中①②海区该月洋流流向分别为：",opts:["西北向东南、西北向东南","东南向西北、东南向西北","西北向东南、东南向西北","东南向西北、西北向东南"],a:0,exp:"印度低压→北半球夏季→北印度洋“夏顺”，①西北向东南；②马六甲受季风洋流补偿也西北向东南。→ A。",src:"2022.1 选考·13"},
+    {q:"（2022.1·14）上题图示季节（北半球夏季），下列现象正确的是：",opts:["田纳西河正处于主汛期","南非大草原上郁郁葱葱","天山积雪下限海拔较高","华北平原播种小麦正忙"],a:2,exp:"北半球夏季气温高，天山积雪下限海拔高。田纳西主汛期在冬春；南非草原（南半球）此时干季；华北冬小麦秋播。→ C。",src:"2022.1 选考·14"},
+    {q:"（2022.1·17）某区域地质构造平面图，主体为向斜、北部有水库。若甲地附近发育有小河，其最可能流向：",opts:["东北","西南","西北","东南"],a:0,exp:"整体南高北低，甲沿东北—西南断层发育，河由西南流向东北。→ A。",src:"2022.1 选考·17"},
+    {q:"（2022.1·18）上图关于地层新老与沉积环境的叙述，正确的是：①b比c老 ②bc期间海岸线向海洋后退 ③b比c新 ④bc期间海岸线向陆地前进",opts:["①②","①④","②③","③④"],a:3,exp:"b石灰岩覆于c砂页岩之上→b更新（③对）；水变深、颗粒变细→海岸线向陆地前进（④对）。→ D。",src:"2022.1 选考·18"},
+    {q:"（2022.6·3）世界局部区域洋流分布示意图（北大西洋东部）。洋流：",opts:["①②均是暖流","①②均是寒流","①是寒流，②是暖流","①是暖流，②是寒流"],a:3,exp:"①由低纬流向高纬=暖流（北大西洋暖流）；②由高纬流向低纬=寒流（加那利寒流）。→ D。",src:"2022.6 选考·3"},
+    {q:"（2022.6·4）受上图所示洋流影响：",opts:["甲海域存在大型渔场","乙群岛出现荒漠景观","丙沿岸冬季降温明显","丁海域地热资源丰富"],a:1,exp:"乙群岛沿岸寒流降温减湿→荒漠；甲非寒暖交汇无大渔场；丙有暖流冬季不降温明显；丁在板块内部地热不丰富。→ B。",src:"2022.6 选考·4"},
+    {q:"（2025.1·1）碳中和背景下，我国海上风电装机快速增长的主要原因是：",opts:["风能清洁","国家政策支持","风能可再生","市场需求增加"],a:1,exp:"题干“通过政策激励和引领”直接指向政策；清洁/可再生是属性不是快速增长的主因。→ B。",src:"2025.1 选考·1"},
+    {q:"（2025.1·2）海上风电在我国总发电量中占比低，是因为：①产业起步晚 ②海上可利用空间小 ③能源消费总量大 ④海上风能匮乏",opts:["①③","①④","②③","②④"],a:0,exp:"占比=风电量÷总发电量。起步晚（①）+能源消费总量大摊薄占比（③）；我国近海空间大、风能丰富。→ A。",src:"2025.1 选考·2"},
+    {q:"（2025.1·3）地质剖面图中石灰岩形成时期：",opts:["爬行动物盛行","被子植物兴盛","蕨类植物繁盛","三叶虫开始出现"],a:2,exp:"石灰岩属石炭纪（古生代），对应蕨类植物繁盛；爬行动物=中生代，被子植物=新生代，三叶虫=早古生代。→ C。",src:"2025.1 选考·3"},
+    {q:"（2025.1·4）图中未知岩层（年龄介于2.6亿与1.2亿年之间）可能是：",opts:["泥盆纪砂砾岩","石炭纪粉砂岩","二叠纪砂页岩","侏罗纪花岗岩"],a:3,exp:"介于二叠纪(2.6亿)与白垩纪(1.2亿)之间=三叠/侏罗纪；且为侵入岩（花岗岩）→ 侏罗纪花岗岩。→ D。",src:"2025.1 选考·4"},
+    {q:"（2025.1·5）为提高我国马铃薯单产，贡献最大的因素是：",opts:["科学技术","播种面积","劳动力数量","复种指数"],a:0,exp:"我国单产远低于发达国家，差距主因是科技（良种、栽培）；面积/劳力/复种影响总产而非单产。→ A。",src:"2025.1 选考·5"},
+    {q:"（2025.1·6）马铃薯保障我国粮食安全的作用原因：①易保鲜储存 ②增产潜力大 ③环境适应能力强 ④符合大众饮食习惯",opts:["①③","①④","②③","②④"],a:2,exp:"我国单产低于世界平均→增产潜力大（②）；耐旱耐寒耐瘠→环境适应强（③）；马铃薯不易保鲜（①错），非水稻小麦式主粮习惯（④错）。→ C。",src:"2025.1 选考·6"}
+    {q:"（2023.1·19）农历正月初八（上弦月），同学在湛蓝天空中观测到日、月同天景象。关于日、月位置和月相，正确的是：",opts:["日月同天，月面朝东、在东部天空","日月同天，月面朝西、在西半天天空","日落后月亮才升起，月面朝东","太阳落下后月亮尚不可见"],a:1,exp:"上弦月初八，上半月的月相黄昏日落后可见，月面朝西、位于西半天；且日、月同天即同时升落。→ B。",src:"2023.1 选考·19"},
+    {q:"（2023.1·20）承上题，(0°,105°W)地点观测到月球正在地平线落下（即该地此日为日落=地方时0时）。此时赤道与晨、昏线交点的经度最接近：",opts:["15°W、165°E","105°W、75°E","165°E、15°W","75°E、105°W"],a:0,exp:"105°W为0时；赤道晨昏线交点地方时6时、18时，分别向东90°、270°（西经相减），得15°W与165°E。→ A。",src:"2023.1 选考·20"},
+    {q:"（2024.1·3）南美洲赤道附近钦博拉索峰植被上限由4600米升至5185米，土壤温度有所升高。从受热过程看，引起土壤温度升高的主要原因是：",opts:["地面辐射减少","大气辐射减少","太阳辐射增加","地面吸收增加"],a:3,exp:"植被上限上升=热量增多，地面吸收太阳辐射增多致土壤升温；地面吸收增则地面辐射、大气辐射也增；太阳辐射量无明显变化。→ D。",src:"2024.1 选考·3"},
+    {q:"（2024.1·4）承上题，植被上限上升后，该山地垂直带谱中：",opts:["雪线海拔高度下降","上限植被是高山草甸","自然带的数量减少","森林带向高海拔扩展"],a:3,exp:"热量改善，森林带向高海拔扩展（D）；雪线上升（A错）；峰顶仍高于上限有高寒荒漠带（B错）；自然带数量未减（C错）。→ D。",src:"2024.1 选考·4"},
+    {q:"（2024.1·16）源自地中海的风暴席卷黑海北岸，甲地出现强降水。甲地强降水主要因为：",opts:["大气受热强烈上升","位于高压脊附近","位于气旋中心","位于锋线（暖锋）前方"],a:3,exp:"甲位于气旋偏东低压槽，北半球气旋逆时针，东侧槽线暖气团主动北推→暖锋，甲在锋前降水；不在气旋中心也不在高压脊。→ D。",src:"2024.1 选考·16"},
+    {q:"（2024.1·17）承上题，未来两日甲地风向变化最大可能是：",opts:["东北→西南","东北→西北","西南→东南","东南→西北"],a:0,exp:"目前甲在低压中心偏北，梯度力向南+地转偏向→东北风；两日后甲转至低压偏南，梯度力向北→西南风。→ A（东北→西南）。",src:"2024.1 选考·17"},
+    {q:"（2021.1·5）世界部分区域略图，所罗门群岛附近甲处位于板块生长边界，其海底宏观地形是：",opts:["海沟","海岭","海盆","裂谷"],a:1,exp:"生长边界→海岭（大洋中脊）。→ B。",src:"2021.1 选考·5"},
+    {q:"（2021.1·6）种植海草对当地海洋生态环境的有利影响：①净化水质 ②提供农副产品 ③改变洋流性质 ④为鱼类提供栖息地",opts:["①②","②③","①④","③④"],a:2,exp:"海草「海洋之肺」净化水质（①）、提供栖息地（④）；提供农副产物非生态角度（②）、不改变洋流性质（③）。→ C。",src:"2021.1 选考·6"},
+    {q:"（2023.1·21）距陆地5km外、水深200m以下的深层海水广受水产、食品产业青睐，因其：①氧气充足 ②清洁少菌 ③矿物营养多 ④光合作用强",opts:["①②","②③","③④","①④"],a:1,exp:"深层海水受人类影响小、清洁少菌（②）；少见光、光合弱但矿物营养保存多（③）；氧气不充足（①）、光合弱（④）。→ B。",src:"2023.1 选考·21"},
+    {q:"（2024.1·20）某河流阶地剖面标注各阶地形成距今时间（T1:1.1万年/30米，T2:2.4万年/35米，T3:5.5万年/50米，T4:40万年/50米）。各级阶地形成过程中：",opts:["T1抬升速率最大","T2抬升幅度最大","T3下沉速率最小","T4下沉幅度最小"],a:0,exp:"抬升速率≈抬升量÷时间：T1≈27m/万年最大；T2≈14.6、T3≈9.1、T4≈1.25均更小。阶地为抬升非下沉。→ A。",src:"2024.1 选考·20"},
+    {q:"（2021.1·3）洞庭湖区水域与陆地交错，从陆地到水底分布森林、灌丛、草甸和水生植被。这反映自然地理环境的：",opts:["垂直分异规律","地方性分异规律","纬度地带分异","经度地带分异"],a:1,exp:"小尺度、非地带性（地形水分导致）的地域分异=地方性分异。→ B。",src:"2021.1 选考·3"},
+    {q:"（2024.1·1）关中—天水经济区人口点密度，关中平原大、北部黄土高原与南部秦岭山地小。影响人口分布的主要自然因素是：",opts:["降水","气温","地形","植被"],a:2,exp:"地势低平的关中平原人口密度大，山地高原小→地形。→ C。",src:"2024.1 选考·1"},
+    {q:"（2024.1·2）西安航空产业基地布局在与中心城区有距离的阎良，主因：①劳动力较丰富 ②市场更大 ③土地供给充足 ④产业基础好",opts:["①②","③④","②③","①④"],a:1,exp:"阎良劳动力不如中心城（①错）、市场不广（②错）；土地供给足、租金低（③），航空城产业基础好（④）。→ B。",src:"2024.1 选考·2"},
+    {q:"（2024.1·12）北方玉米主产区四省区玉米产量均大幅上升，主因：",opts:["全球变暖升温","饮食结构变化、市场需求增加","环境改善降水增加","耕地质量提升、复种指数提高"],a:1,exp:"居民收入提高→肉蛋奶需求增→玉米（饲料）市场需求增（B）；全球变暖影响小、复种指数受热量限制。→ B。",src:"2024.1 选考·12"},
+    {q:"（2024.1·13）关于北方四省区玉米生产表述正确：①内蒙古土地资源丰富、产量增幅最大 ②辽宁灌溉用水紧张、产量略降 ③吉林水土流失加剧、明显收缩 ④黑龙江机械化水平提高、效益提高",opts:["①②","②③","①④","③④"],a:2,exp:"内蒙古面积广增幅最大（①对）；辽宁产量未降（②错）；吉林产量升未明显收缩（③错）；黑龙江机械化提高效益（④对）。→ C。",src:"2024.1 选考·13"},
+    {q:"（2024.1·5）我国某都市圈轨道交通与城市空间形态关系图。甲联系近郊、站点密；乙联系远近郊及周边城镇；丙站点少、延伸远。甲、乙、丙分别是：",opts:["市区地铁、市郊铁路、高速铁路","市郊铁路、市区地铁、高速铁路","市区地铁、高速铁路、市郊铁路","市郊铁路、高速铁路、市区地铁"],a:0,exp:"甲近郊密=市区地铁；乙联系远近郊及城镇=市郊铁路；丙远延伸少站=高速铁路。→ A。",src:"2024.1 选考·5"},
+    {q:"（2024.1·6）都市圈轨道交通发展带来的影响是：",opts:["都市圈内部通勤距离缩短","近郊产业沿轴线集聚","中心城区环境质量下降","远郊空间呈连绵发展"],a:1,exp:"提高近郊通达度→产业沿轴线集聚（B）；不缩短通勤距离（A错）、改善环境（C错）、远郊呈珠链非连绵（D错）。→ B。",src:"2024.1 选考·6"},
+    {q:"（2024.1·9）甲省水资源总量<用水量（短缺），乙省总量>用水量（盈余）。调节不平衡可采取：",opts:["增加甲的降水量","减少乙的生活用水","甲乙间产业转移","甲乙间跨区域调水"],a:3,exp:"总量与用水量不平衡→跨区域调水（D）；人工增雨不可控、减乙生活用水不现实、产业转移非直接调节。→ D。",src:"2024.1 选考·9"},
+    {q:"（2021.1·1）按自然灾害成因与发生过程，滑坡属于：",opts:["气象灾害","生物灾害","海洋灾害","地质灾害"],a:3,exp:"滑坡是岩土体在重力作用下沿软弱面下滑，属地质灾害。→ D。",src:"2021.1 选考·1"},
+    {q:"（2021.1·2）基于地理信息技术的滑坡预警监测系统，描述正确的是：①GPS采集雨量 ②BDS采集滑坡体位移 ③RS模拟滑坡动态 ④GIS数据分析与共享",opts:["①②","②④","①③","③④"],a:1,exp:"BDS（定位）采位移（②对）；GIS分析共享（④对）；GPS不采雨量（①错），RS不模拟动态（③错）。→ B。",src:"2021.1 选考·2"},
+    {q:"（2024.1·15）土耳其地震灾后救援与重建中，可运用：",opts:["GPS动态获取夜间灯光强度","GIS实时采集灾区气象","RS模拟分析辅助决策","BDS准确提供急需救援的位置"],a:3,exp:"BDS=定位导航，准确定位急需救援位置（D）；动态获取灯光/采集气象是RS（AB错），模拟分析辅助决策用GIS（C错）。→ D。",src:"2024.1 选考·15"},
+    {q:"（2024.1·14）土耳其震前2月4日、震后2月8日、9日三幅夜间灯光强度图（①最亮②居中③最暗），正确时间顺序是：",opts:["①③②","①②③","②③①","③②①"],a:0,exp:"震前供电正常最亮=①；震后设施破坏最暗=③；救援后部分恢复居中=②。→ A（①③②）。",src:"2024.1 选考·14"},
+    {q:"（2021.1·11）非洲西部局部大气环流示意图，正确的是：",opts:["甲风带风向季节变化明显","乙气流受动力因素上升","丙风向形成受地转偏向力影响","丁风带为大陆西岸带来充足水汽"],a:2,exp:"丙为信风等，风向受地转偏向力影响（C）；甲风带（信风）方向稳定（A错）；乙气流受热力上升（B错）；丁为离岸风少水汽（D错）。→ C。",src:"2021.1 选考·11"},
+    {q:"（2021.1·12）图示季节（北半球夏季），最可能出现：",opts:["北印度洋洋流逆时针流动","黄河中游含沙量明显增加","北半球副极地低气压带被切断","地中海沿岸温和多雨"],a:1,exp:"北半球夏季，我国东部进入雨季，黄河中游水土流失、含沙量增（B）；北印度洋夏顺（A错）、副极地低压冬季被切断（C错）、地中海夏季干热（D错）。→ B。",src:"2021.1 选考·12"}
+  ];
+  var qStage=document.getElementById('q-stage'),qIntro=document.getElementById('q-intro'),qCard=document.getElementById('q-card'),
+      qNo=document.getElementById('q-no'),qSrc=document.getElementById('q-src'),qText=document.getElementById('q-text'),
+      qOpts=document.getElementById('q-opts'),qFeed=document.getElementById('q-feed'),qNext=document.getElementById('q-next'),
+      qResult=document.getElementById('q-result'),qProg=document.getElementById('q-progress'),qBest=document.getElementById('q-best');
+  var qOrder=[],qIdx=0,qScore=0,qAnswered=0;
+  try{var b0=localStorage.getItem('zjgeo_best');if(b0)qBest.textContent='最佳：'+b0+' 分';}catch(e){}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function startQuiz(){
+    qOrder=shuffle(QBANK).slice(0,Math.min(10,QBANK.length));
+    qIdx=0;qScore=0;qAnswered=0;
+    qIntro.style.display='none';qResult.style.display='none';qCard.style.display='block';
+    renderQ();
+  }
+  function renderQ(){
+    var it=qOrder[qIdx];
+    qNo.textContent='第 '+(qIdx+1)+' / '+qOrder.length+' 题';
+    qSrc.textContent=it.src;qText.textContent=it.q;
+    qOpts.innerHTML='';qFeed.style.display='none';qFeed.innerHTML='';qNext.style.display='none';
+    it.opts.forEach(function(op,i){
+      var b=document.createElement('button');b.className='q-opt';b.textContent=op;
+      b.addEventListener('click',function(){choose(i,b);});
+      qOpts.appendChild(b);
+    });
+    updateProg();
+  }
+  function choose(i,btn){
+    var it=qOrder[qIdx];var correct=(i===it.a);
+    Array.prototype.forEach.call(qOpts.children,function(b){b.disabled=true;});
+    qOpts.children[it.a].classList.add('correct');
+    if(!correct)btn.classList.add('wrong');
+    if(correct)qScore++;qAnswered++;
+    qFeed.style.display='block';
+    qFeed.innerHTML='<span class="fk">'+(correct?'✓ 答对了！':'✗ 正确答案：'+String.fromCharCode(65+it.a))+'</span>　'+it.exp;
+    updateProg();qNext.style.display='inline-block';
+  }
+  function updateProg(){qProg.textContent='共 '+qOrder.length+' 题 · 已答 '+qAnswered+' · 得分 '+qScore;}
+  qNext.addEventListener('click',function(){qIdx++;if(qIdx>=qOrder.length)finishQuiz();else renderQ();});
+  function finishQuiz(){
+    qCard.style.display='none';qResult.style.display='block';
+    var pct=Math.round(qScore/qOrder.length*100);
+    var msg=pct===100?'满分！命题人设的坑你全看穿了 🎯':(pct>=70?'稳了，再刷几组可冲满分':(pct>=40?'基础不弱，重点补自然地理计算与洋流':'建议先过一遍各模块易混易错表'));
+    qResult.innerHTML='<div class="big">'+qScore+' / '+qOrder.length+'</div><p>正确率 '+pct+'% — '+msg+'</p><button id="q-restart" class="show-btn" style="margin-top:8px">再来一次（重新随机）</button>';
+    try{var b=parseInt(localStorage.getItem('zjgeo_best')||'0',10);if(qScore>b){localStorage.setItem('zjgeo_best',qScore);qBest.textContent='最佳：'+qScore+' 分';}}catch(e){}
+    document.getElementById('q-restart').addEventListener('click',startQuiz);
+  }
+  document.getElementById('q-start').addEventListener('click',startQuiz);
+
+  // ============ 阅读进度条 + 回顶 ============
+  var pbar=document.getElementById('progress-bar'),toTop=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    var p=h>0?window.scrollY/h*100:0;pbar.style.width=p+'%';
+    toTop.style.display=window.scrollY>400?'block':'none';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  onScroll();
+});
+</script>
+</body>
+</html>
